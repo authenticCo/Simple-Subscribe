@@ -1,0 +1,138 @@
+@import '_vendors/font-awesome/fontawesome';
+@import '_vendors/font-awesome/solid';
+@import '_vendors/font-awesome/brands';
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import 'base/minireset';
+@import 'base/variables';
+
+$primary-background: url(../img/SVG/background.svg);
+
+body {
+  background-color: $main-background-color;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vH;
+}
+#main-wrapper{
+  background:url(../img/SVG/background.svg) no-repeat;
+  background-size:cover;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 50%;
+  box-shadow: -3px 16px 20px 2px rgba(0, 0, 0, 0.3);
+  }
+
+#inner-wrapper{
+  background-color: #fff;
+  width: 75%;
+  height: 50%;
+  border-radius: 25px;
+  box-shadow: 0px 13px 20px 3px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+
+  .left{
+    background-color: #9A81D2;
+    height: 100%x;
+    width: 30%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*PICS*/
+    #mail_img{
+      width: 100%;
+      background: url(../img/SVG/mail.svg) no-repeat;
+      background-size:contain;
+      height: 50%;
+      top: 25px;
+      left: 50px;
+      position: relative;
+    }
+    #star{
+      width: 100%;
+      background: url(../img/SVG/star.svg) no-repeat;
+      background-size:contain;
+      height: 25%;
+      z-index: 3;
+      position: relative;
+      bottom: 70px;
+      right: 70px;
+    }
+
+  }
+  .right{
+    padding: 30px;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+      .text{
+        font-family: $font-family-main;
+        color: #7B7B7B;
+        h1{
+          text-transform: uppercase;
+          font-size: 48px;
+          font-weight: 800;
+        }
+        p{
+          font-size: 11px;
+          padding: 0 50px;
+          font-weight: 500;
+        }
+      }
+      .signUp{
+        margin: 20px 0;
+
+        input{
+          width: 75%;
+          margin: 10px auto;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: 800;
+          font-family: $font-family-main;
+          color: #DFDFDF !important;
+          background-color: #DFE1E0;
+          border-radius: 50px;
+          border: none; 
+        }
+        button{
+          background-color: #9A81D2;
+          color: #fff;
+          width: 30%;
+          border-radius: 50px;
+          font-weight: 600;
+          text-transform:uppercase;
+          letter-spacing: 2px;
+          font-size: 20px;
+        }
+      }
+  }
+}
+.user {
+  @include fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-user);
+  }
+}
+
+.twitter {
+  @include fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-twitter);
+  }
+}
